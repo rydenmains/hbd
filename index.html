@@ -3,17 +3,14 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Happy Birthday Nayaa :)</title>
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
-   <script> 
-   
-   let currentSection = 0;
-const sections = [0.2, 0.4, 0.6, 0.8, 1]; // Timeline progress points
+   <script>  
 
 document.addEventListener('click', () => {
     if (currentSection < sections.length) {
@@ -27,11 +24,8 @@ document.addEventListener('click', () => {
         title: 'Password :',
         input: 'text',
         inputPlaceholder: 'Bebas...',
-        showCancelButton: true,
         confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
         confirmButtonText: 'Gas',
-        cancelButtonText: 'Skip',
     }).then((result) => {
         if (result.isConfirmed) {
             animationTimeline();
@@ -136,7 +130,7 @@ const animationTimeline = () => {
             opacity: 0,
             y: -150
         },
-    "+=1")
+    "+=17")
     .from(".idea-1", 0.7, ideaTextTrans)
     .to(".idea-1", 0.7, ideaTextTransLeave, "+=2.5")
     .from(".idea-2", 0.7, ideaTextTrans)
@@ -301,294 +295,420 @@ const animationTimeline = () => {
       <!-- My Style -->
   <style> 
   html {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-  }
-  
-  
-  .container {
-    height: 100vh;
-    margin: 0 auto;
-    overflow: hidden;
-    position: relative;
-    text-align: center;
-    visibility: hidden;
-    width: 100vw;
-  }
-  
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+.container {
+  height: 100vh;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  visibility: hidden;
+  width: 100vw;
+}
+
+.container > div {
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 20vh;
+}
+
+.one {
+  font-size: 4.5rem;
+}
+
+.two {
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+.three {
+  font-size: 3rem;
+}
+
+.four .text-box {
+  border: 3px solid #aaa;
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+  width: 600px;
+}
+
+.text-box p {
+  margin: 0;
+  text-align: left;
+}
+
+.text-box span {
+  visibility: hidden;
+}
+
+.text-box .fake-btn {
+  background-color: rgb(21, 161, 237);
+  border-radius: 3px;
+  bottom: -50px;
+  color: #fff;
+  padding: .5rem 1rem;
+  position: absolute;
+  right: 5px;
+}
+
+.five p {
+  font-size: 2rem;
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+
+.idea-3 strong {
+  border-radius: 3px;
+  display: inline-block;
+  padding: 3px 5px;
+}
+
+.five .idea-5 {
+  font-size: 3rem;
+}
+
+.idea-5 span, .idea-6 span, .wish-hbd span {
+  display: inline-block;
+}
+
+.idea-6 span {
+  font-size: 15rem;
+}
+
+.six {
+  position: relative;
+  top: 10vh;
+  z-index: 1;
+}
+
+.six img {
+  display: inline-block;
+  height: 350px;
+  max-width: 100%;
+}
+
+.six .hat {
+  position: absolute;
+  width: 80px;
+  top: -25%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.baloons img {
+  display: inline-block;
+  position: absolute;
+  width: 440px;
+}
+
+.baloons img:nth-child(even) {
+  left: -10%;
+}
+
+.baloons img:nth-child(odd) {
+  right: -10%;
+}
+
+.baloons img:nth-child(3n + 0) {
+  left: 30%;
+}
+
+.seven, .eight {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+
+.eight svg {
+  left: 0;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  width: 25px;
+  z-index: -1;
+}
+
+.eight svg:nth-child(1) {
+  fill: #bd6ecf;
+  left: 5vw;
+  top: 7vh;
+}
+
+.eight svg:nth-child(2) {
+  fill: #7dd175;
+  left: 35vw;
+  top: 23vh;
+}
+
+.eight svg:nth-child(3) {
+  fill: #349d8b;
+  left: 23vw;
+  top: 33vh;
+}
+
+.eight svg:nth-child(4) {
+  fill: #347a9d;
+  left: 57vw;
+  top: 43vh;
+}
+
+.eight svg:nth-child(5) {
+  fill: #c66053;
+  left: 7vw;
+  top: 68vh;
+}
+
+.eight svg:nth-child(6) {
+  fill: #bfaa40;
+  left: 77vw;
+  top: 42vh;
+}
+
+.eight svg:nth-child(7) {
+  fill: #e3bae8;
+  left: 83vw;
+  top: 68vh;
+}
+
+.eight svg:nth-child(8) {
+  fill: #8762cb;
+  left: 37vw;
+  top: 86vh;
+}
+
+.eight svg:nth-child(9) {
+  fill: #9a90da;
+  left: 87vw;
+  top: 94vh;
+}
+
+.wish-hbd {
+  font-size: 3em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.wish h5 {
+  font-size: 2rem;
+  font-weight: lighter;
+  margin: 10px 0 0;
+}
+
+.nine p {
+  font-size: 2rem;
+  font-weight: lighter;
+}
+
+#replay {
+  cursor: pointer;
+  z-index: 3;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
   .container > div {
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 20vh;
-  }
-  
-  .one {
-    font-size: 4.5rem;
-  }
-  
-  .two {
-    font-size: 1.2rem;
-    font-weight: lighter;
-  }
-  
-  .three {
-    font-size: 3rem;
-  }
-  
-  .four .text-box {
-    border: 3px solid #aaa;
-    border-radius: 5px;
-    margin: 0 auto;
-    padding: 10px;
-    position: relative;
-    width: 600px;
-  }
-  
-  .text-box p {
-    margin: 0;
-    text-align: left;
-  }
-  
-  .text-box span {
-    visibility: hidden;
-  }
-  
-  .text-box .fake-btn {
-    background-color: rgb(21, 161, 237);
-    border-radius: 3px;
-    bottom: -50px;
-    color: #fff;
-    padding: .5rem 1rem;
-    position: absolute;
-    right: 5px;
-  }
-  
-  .five p {
-    font-size: 2rem;
-    left: 0;
-    position: absolute;
-    right: 0;
-  }
-  
-  .idea-3 strong {
-    border-radius: 3px;
-    display: inline-block;
-    padding: 3px 5px;
-  }
-  
-  .five .idea-5 {
-    font-size: 4rem;
-  }
-  
-  .idea-5 span, .idea-6 span, .wish-hbd span {
-    display: inline-block;
-  }
-  
-  .idea-6 span{
-    font-size: 15rem;
-  }
-  
-  
-  .six {
-    position: relative;
     top: 10vh;
-    z-index: 1;
   }
-  
-  .six img {
-    display: inline-block;
-    height: 350px;
-    max-width: 100%;
-    /* height: auto; */
+
+  .one {
+    font-size: 1.5rem;
   }
-  
+
+  .two {
+    font-size: 1rem;
+  }
+
+  .three {
+    font-size: 2rem;
+  }
+
+  .four .text-box {
+    width: 85%;
+    padding: 8px;
+  }
+
+  .text-box p {
+    font-size: 0.9rem;
+  }
+
+  .text-box .fake-btn {
+    bottom: -35px;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .five p {
+    font-size: 1.5rem;
+  }
+
+  .idea-5 {
+    font-size: 2rem;
+  }
+
+  .idea-6 span {
+    font-size: 12rem;
+  }
+
+  .six img.profile-picture {
+    height: 200px;
+  }
+
   .six .hat {
-    left: 41.5%;
-    position: absolute;
-    /* transform: scale(0.1); */
-    top: -35%;
-    width: 80px;
+    width: 60px;
+    top: -70%;
   }
-  
+
+  .wish-hbd {
+    font-size: 2em;
+  }
+
+  .wish h5 {
+    font-size: 1.2rem;
+  }
+
+  .nine p {
+    font-size: 1.2rem;
+  }
+
   .baloons img {
-    display: inline-block;
-    position: absolute;
+    width: 190px;
   }
-  
+
   .baloons img:nth-child(even) {
-    left: -10%;
+    left: -5%;
   }
-  
+
   .baloons img:nth-child(odd) {
-    right: -10%;
+    right: -5%;
   }
-  
+
   .baloons img:nth-child(3n + 0) {
-    left: 30%;
+    left: 35%;
   }
-  
-  .seven, .eight {
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    width: 100vw;
-  }
-  
-  .eight svg {
-    left: 0;
-    position: absolute;
-    top: 0;
-    visibility: hidden;
-    width: 25px;
-    z-index: -1;
-  }
-  
-  .eight svg:nth-child(1) {
-    fill: #bd6ecf;
-    left: 5vw;
+}
+
+@media screen and (max-width: 480px) {
+  .container > div {
     top: 7vh;
   }
-  
-  .eight svg:nth-child(2) {
-    fill: #7dd175;
-    left: 35vw;
-    top: 23vh;
+
+  .one {
+    font-size: 2rem;
   }
-  
-  .eight svg:nth-child(3) {
-    fill: #349d8b;
-    left: 23vw;
-    top: 33vh;
+
+  .two {
+    font-size: 0.9rem;
   }
-  
-  .eight svg:nth-child(4) {
-    fill: #347a9d;
-    left: 57vw;
-    top: 43vh;
+
+  .three {
+    font-size: 1.5rem;
   }
-  
-  .eight svg:nth-child(5) {
-    fill: #c66053;
-    left: 7vw;
-    top: 68vh;
+
+  .text-box p {
+    font-size: 0.7rem;
   }
-  
-  .eight svg:nth-child(6) {
-    fill: #bfaa40;
-    left: 77vw;
-    top: 42vh;
+
+  .five {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
-  
-  .eight svg:nth-child(7) {
-    fill: #e3bae8;
-    left: 83vw;
-    top: 68vh;
+
+  .five p {
+    font-size: 1.2rem;
   }
-  
-  .eight svg:nth-child(8) {
-    fill: #8762cb;
-    left: 37vw;
-    top: 86vh;
+
+  .idea-5 {
+    font-size: 1.5rem;
   }
-  
-  .eight svg:nth-child(9) {
-    fill: #9a90da;
-    left: 87vw;
-    top: 94vh;
+
+  .idea-6 span {
+    font-size: 10rem;
   }
-  
+
+  .six img.profile-picture {
+    height: 150px;
+  }
+
+  .six .hat {
+    width: 45px;
+    top: -90%;
+  }
+
   .wish-hbd {
-    font-size: 3em;
-    margin: 0;
-    text-transform: uppercase;
+    font-size: 1.6em;
   }
-  
+
   .wish h5 {
-    font-size: 2rem;
-    font-weight: lighter;
-    margin: 10px 0 0;
+    font-size: 1rem;
   }
-  
+
   .nine p {
-    font-size: 2rem;
-    font-weight: lighter;
+    font-size: 1rem;
   }
-  
-  #replay {
-    cursor: pointer;
-    z-index: 3;
+
+  .baloons img {
+    width: 290px;
   }
-  
-  /* Media Queries */
-  @media screen and (max-height: 1000px) {
-    .six .hat {
-      left: 40%;
-    }
+
+  .baloons img:nth-child(even) {
+    left: 0;
   }
-  
-  @media screen and (max-height: 800px) {
-    .six .hat {
-      left: 37%;
-    }
+
+  .baloons img:nth-child(odd) {
+    right: 0;
   }
-  
-  @media screen and (max-height: 700px) {
-    .six .hat {
-      left: 32%;
-    }
+
+  .baloons img:nth-child(3n + 0) {
+    left: 40%;
   }
-  
-  @media screen and (max-height: 850px) and (max-width: 450px) {
-    .six .hat {
-      left: 32%;
-    }
+}
+
+@media screen and (max-width: 320px) {
+  .one {
+    font-size: 1.8rem;
   }
-  
-  @media screen and (max-width: 500px) {
-    .container {
-      width: 90%;
-    }
-  
-    .four .text-box {
-      width: 90%;
-    }
-  
-    .text-box .fake-btn {
-      bottom: -38px;
-      right: 5px;
-    }
-  
-    .idea-5 span {
-      display: block;
-    }
-  
-    .idea-6 span {
-      font-size: 10rem;
-    }
-  
-    .six .hat {
-      /* top: -20px; */
-      width: 50px;
-    }
-  
-    .wish-hbd {
-      font-size: 2.2em;
-    }
-  
-    .wish h5 {
-      font-size: 1.4rem;
-    }
-  
-    .nine p {
-      font-size: 1.5rem;
-      font-weight: lighter;
-    }
-  }</style>
+
+  .five p {
+    font-size: 1rem;
+  }
+
+  .idea-5 {
+    font-size: 1.2rem;
+  }
+
+  .idea-6 span {
+    font-size: 8rem;
+  }
+
+  .six img.profile-picture {
+    height: 130px;
+  }
+
+  .six .hat {
+    width: 35px;
+    top: -35%;
+  }
+
+  .baloons img {
+    width: 60px;
+  }
+
+  .baloons img:nth-child(3n + 0) {
+    left: 45%;
+  }
+}</style>
 </head>
 
 <body>
@@ -609,7 +729,7 @@ const animationTimeline = () => {
         <div class="four">
             <div class="text-box">
                 <p class="hbd-chatbox">
-                  haii kak, cielah yang ada yang ulang tahun nih 🥳 happy birthday kakk , cie yang hari ini bakal tiup lilin. selamat ya, semoga umur lo panjang biar ntar anak lo sama anak gw tau kalo sahabat sejati itu ada wkwkwk. gw ga expect kita bakal mutualan an sampe sekarang, padahal dulu kita asing banget. gw bersyukur udah pernah ketemu sama lo, lo adalah salah satu mutual terbaik gw. makasih udah hadir dalam hidup gw, makasih udah bertahan demi hal hal kecil. makasih udah mau kuat sampe sekarang, makasih juga buat mamah lo yang udah ngelahirin anak secantik, selucu, serandom lo. gw kira lo tuh anak yang pendiem, kalem. ternyata ga haha, lo asik orang nya, bahkan lo bisa jadi alasan utama gw kalo mau keluar sama temen temen yang lain nya. makasih ya udah mau temenan sama gw, gw bener bener beruntung ketemu lo. lo udah sering gw cerita in ke keluarga gw karena emang gw sesenang itu bisa kenal sama lo, ayo janji kita bakal sama sama terus ya? apapun halangan nya kita lewati bareng. jangan pernah berfikiran untuk ninggalin gw ya? gw sayang banget sama lo, i can't say anything other than lucky, because I'm really that lucky to have you. jangan pernah hilang dari kehidupan gw, lo adalah salah satu kebahagian gw setelah keluarga gw. lopyu as always 🤍
+                  haii kak, cielah yang ada yang ulang tahun nih 🥳, happy birthday kakk. cie yang hari ini bakal tiup lilin. selamat ya, semoga umur lo panjang biar ntar anak lo sama anak gw tau kalo sahabat sejati itu ada wkwkwk. gw ga expect kita bakal mutualan an sampe sekarang, padahal dulu kita asing banget. gw bersyukur udah pernah ketemu sama lo, lo adalah salah satu mutual terbaik gw. makasih udah hadir dalam hidup gw, makasih udah bertahan demi hal hal kecil. makasih udah mau kuat sampe sekarang, makasih juga buat mamah lo yang udah ngelahirin anak secantik, selucu, serandom lo. gw kira lo tuh anak yang pendiem, kalem, ternyata ga haha. lo asik orang nya, kayaknya every date works dah sama lo. makasih ya udah mau temenan sama gue, gwe bener bener beruntung ketemu lo. lo udah sering gw cerita in ke keluarga gw karena emang gw sesenang itu bisa kenal sama lo. whatever in the future might be, jangan ninggalin aku ia? I do care about you, I'm really that lucky to have you. jangan pernah hilang dari kehidupan gw ia lopyu. btw maap ia ga bisa di skip, ga lama kok nunggu nya ini
                 </p>
                 <p class="fake-btn">Send</p>
             </div>
@@ -625,7 +745,7 @@ const animationTimeline = () => {
             </p>
             <p class="idea-4">karena,</p>
             <p class="idea-5">
-                kamu special
+                kamu spesial
                 <span>:)</span>
             </p>
             <p class="idea-6">
@@ -641,7 +761,7 @@ const animationTimeline = () => {
             <img src="img/hat.svg" alt="hat" class="hat" />
             <div class="wish">
                 <h3 class="wish-hbd">Happy Birthday!</h3>
-                <h5 id="wishText">Moga ketemu di ITS ia ;)</h5>
+                <h5 id="wishText">ditunggu meet up nya :D</h5>
             </div>
         </div>
 
@@ -714,7 +834,7 @@ const animationTimeline = () => {
         </div>
 
         <div class="nine">
-            <p>Okay, now come back and tell me if you liked it.</p>
+            <p>kay, now come back and tell me if you liked it.</p>
             <p id="replay">atau klik lagi, kalau kamu mw lihat ini lagi</p>
             <p class="last-smile">:)</p>
         </div>
