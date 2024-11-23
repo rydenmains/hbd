@@ -114,7 +114,7 @@ const animationTimeline = () => {
     })
     .staggerTo(
         ".hbd-chatbox span",
-        1, {
+        0.75, {
             visibility: "visible",
         },
         0.008
@@ -538,7 +538,11 @@ body {
     width: 85%;
     padding: 8px;
   }
-
+.five {
+    display: block; /* Ensure it is displayed */
+    overflow-x: auto; /* Allow scrolling if content overflows */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
+  }
   .text-box p {
     font-size: 0.9rem;
   }
@@ -623,6 +627,7 @@ body {
   .five {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    diplay: block;
   }
 
   .five p {
