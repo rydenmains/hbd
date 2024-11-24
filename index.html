@@ -50,26 +50,6 @@ document.addEventListener('click', () => {
 
     showPasswordPrompt(); // Initial call to show password prompt
 });
-This updated code:
-
-Sets a constant correctPassword - replace "akhem" with your desired password
-Creates a separate function showPasswordPrompt() for reusability
-Adds input validation with inputValidator
-Shows an error message if:
-
-The input is empty
-The password is incorrect
-
-
-Only runs animationTimeline() if the correct password is entered
-Keeps showing the password prompt until the correct password is entered
-Prevents closing the prompt by clicking outside (allowOutsideClick: false)
-Removes the cancel button (showCancelButton: false)
-
-The user will now need to enter the correct password to see the birthday animation, and they'll get feedback if they enter the wrong password. CopyRetryClaude does not have the ability to run the code it generates yet.Claude can make mistakes. Please double-check responses.
-
-
-
 // animation timeline
 const animationTimeline = () => {
     // split chars that needs to be animated individually
