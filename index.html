@@ -18,22 +18,55 @@ document.addEventListener('click', () => {
         currentSection++;
     }
 });
-  // trigger to play music in the background with sweetalert
-  window.addEventListener('load', () => {
-    Swal.fire({
-        title: 'Password :',
-        input: 'text',
-        inputPlaceholder: 'Bebas...',
-        confirmButtonColor: '#3085d6',
-        confirmButtonText: 'Gas',
-    }).then((result) => {
-        if (result.isConfirmed) {
-            animationTimeline();
-        } else {
-            animationTimeline();
-        }
-    });
+  // trigger to show password (actually musi but i change that lolz)
+ window.addEventListener('load', () => {
+    const correctPassword = "leanaya"; // Set your desired password here
+    
+    const showPasswordPrompt = () => {
+        Swal.fire({
+            title: 'Password :',
+            input: 'text',
+            inputPlaceholder: 'Bebas...',
+            confirmButtonColor: '#3085d6',
+            confirmButtonText: 'Gas',
+            allowOutsideClick: false,
+            showCancelButton: false,
+            inputValidator: (value) => {
+                if (!value) {
+                    return 'Please enter the password!';
+                }
+                if (value !== correctPassword) {
+                    return 'Incorrect password!';
+                }
+            }
+        }).then((result) => {
+            if (result.isConfirmed && result.value === correctPassword) {
+                animationTimeline();
+            } else {
+                showPasswordPrompt(); // Show prompt again if password is incorrect
+            }
+        });
+    };
+
+    showPasswordPrompt(); // Initial call to show password prompt
 });
+This updated code:
+
+Sets a constant correctPassword - replace "akhem" with your desired password
+Creates a separate function showPasswordPrompt() for reusability
+Adds input validation with inputValidator
+Shows an error message if:
+
+The input is empty
+The password is incorrect
+
+
+Only runs animationTimeline() if the correct password is entered
+Keeps showing the password prompt until the correct password is entered
+Prevents closing the prompt by clicking outside (allowOutsideClick: false)
+Removes the cancel button (showCancelButton: false)
+
+The user will now need to enter the correct password to see the birthday animation, and they'll get feedback if they enter the wrong password. CopyRetryClaude does not have the ability to run the code it generates yet.Claude can make mistakes. Please double-check responses.
 
 
 
@@ -130,7 +163,7 @@ const animationTimeline = () => {
             opacity: 0,
             y: -150
         },
-    "+=14")
+    "+=16")
     .from(".idea-1", 0.7, ideaTextTrans)
     .to(".idea-1", 0.7, ideaTextTransLeave, "+=2.5")
     .from(".idea-2", 0.7, ideaTextTrans)
@@ -742,9 +775,9 @@ body {
         <div class="four">
             <div class="text-box">
                 <p class="hbd-chatbox">
-                  haii kak, cielah yang ada yang ulang tahun nih 🥳, happy birthday kakk. cie yang hari ini bakal tiup lilin. selamat ya, semoga umur lo panjang biar ntar anak lo sama anak gw tau kalo sahabat sejati itu ada wkwkwk. gw ga expect kita bakal mutualan an sampe sekarang, padahal dulu kita asing banget. gw bersyukur udah pernah ketemu sama lo, lo adalah salah satu mutual terbaik gw. makasih udah hadir dalam hidup gw, makasih udah bertahan demi hal hal kecil. makasih udah mau kuat sampe sekarang, makasih juga buat mamah lo yang udah ngelahirin anak secantik, selucu, serandom lo. gw kira lo tuh anak yang pendiem, kalem, ternyata ga haha. lo asik orang nya, kayaknya every date works dah sama lo. makasih ya udah mau temenan sama gue, gwe bener bener beruntung ketemu lo. lo udah sering gw cerita in ke keluarga gw karena emang gw sesenang itu bisa kenal sama lo. whatever in the future might be, jangan ninggalin aku ia? I do care about you, I'm really that lucky to have you. jangan pernah hilang dari kehidupan gw ia lopyu. btw maap ia ga bisa di skip, ga lama kok nunggu nya ini
+                  haii kak leaa, cielah yang ada yang ulang tahun nih 🥳, happy birthday kakk. cie yang hari ini bakal tiup lilin. selamat ia semoga umur lo panjang biar ntar anak lo sama anak gw tau kalo sahabat sejati itu ada wkwkwk. gw ga expect kita bakal mutualan an sampe sekarang, padahal dulu kita asing banget. gw bersyukur udah pernah ketemu sama lo, lo adalah salah satu mutual terbaik gw >_<. makasih udah hadir dalam hidup gw, makasih udah bertahan demi hal hal kecil. makasih udah mau kuat sampe sekarang, makasih juga buat mamah lo yang udah ngelahirin anak secantik, selucu, serandom lo. gw kira lo tuh anak yang pendiem, kalem, ternyata ga wkwkwk. lo asik orang nya, kayaknya every date works dah sama lo T_T. makasih ya udah mau temenan sama gue, gwe bener bener beruntung ketemu lo. lo udah sering gw cerita in ke keluarga gw karena emang gw sesenang itu bisa kenal sama lo. whatever in the future might be, jangan ninggalin aku ia? I do care about you, I'm really that lucky to have you. jangan pernah hilang dari kehidupan gw ia, oke lopyu kak leaa ^_^
                 </p>
-                <p class="fake-btn">Send</p>
+                <p class="fake-btn">Kirim</p>
             </div>
         </div>
 
@@ -774,7 +807,7 @@ body {
             <img src="img/hat.svg" alt="hat" class="hat" />
             <div class="wish">
                 <h3 class="wish-hbd">Happy Birthday!</h3>
-                <h5 id="wishText">ditunggu meet up nya :D</h5>
+                <h5 id="wishText">ditunggu meet up nya kak :D</h5>
             </div>
         </div>
 
