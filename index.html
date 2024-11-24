@@ -367,7 +367,15 @@ body {
   position: relative;
   right: 0;
 }
-
+.five::-webkit-scrollbar {
+    display: none;
+}
+.five {
+    overflow-x: auto;
+    scrollbar-width: none;
+    /* Hide scrollbar for IE and Edge */
+    -ms-overflow-style: none;
+}
 .idea-3 strong {
   border-radius: 3px;
   display: inline-block;
@@ -631,7 +639,7 @@ body {
   }
 
   .five p {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .idea-5 {
@@ -639,7 +647,7 @@ body {
   }
 
   .idea-6 span {
-    font-size: 10rem;
+    font-size: 9rem;
   }
 
   .six img.profile-picture {
